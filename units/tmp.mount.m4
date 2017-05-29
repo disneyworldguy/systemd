@@ -11,8 +11,8 @@ Documentation=man:hier(7)
 Documentation=http://www.freedesktop.org/wiki/Software/systemd/APIFileSystems
 ConditionPathIsSymbolicLink=!/tmp
 DefaultDependencies=no
-Conflicts=umount.target
-Before=local-fs.target umount.target
+Conflicts=umount-post.target
+Before=local-fs.target umount-post.target
 After=swap.target
 
 [Mount]

@@ -522,6 +522,7 @@ dist_systemunit_DATA = \
 	units/shutdown.target \
 	units/final.target \
 	units/umount.target \
+	units/umount-post.target \
 	units/sigpwr.target \
 	units/sleep.target \
 	units/sockets.target \

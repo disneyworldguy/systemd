@@ -23,6 +23,7 @@
 
 /* Shutdown targets */
 #define SPECIAL_UMOUNT_TARGET "umount.target"
+#define SPECIAL_UMOUNT_POST_TARGET "umount-post.target"
 /* This is not really intended to be started by directly. This is
  * mostly so that other targets (reboot/halt/poweroff) can depend on
  * it to bring all services down that want to be brought down on

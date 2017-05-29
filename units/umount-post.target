@@ -6,12 +6,9 @@
 #  (at your option) any later version.
 
 [Unit]
-Description=Power-Off
-Documentation=man:systemd-halt.service(8)
+Description=Unmount All Filesystems
+Documentation=man:systemd.special(7)
 DefaultDependencies=no
-Requires=shutdown.target umount.target umount-post.target final.target
-After=shutdown.target umount.target umount-post.target final.target
-
-[Service]
-Type=oneshot
-ExecStart=@SYSTEMCTL@ --force poweroff
+RefuseManualStart=yes
+After=umount.target
+Requires=umount.target

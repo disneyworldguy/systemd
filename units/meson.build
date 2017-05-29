@@ -100,6 +100,7 @@ units = [
         ['time-sync.target',                    ''],
         ['timers.target',                       ''],
         ['umount.target',                       ''],
+        ['umount-post.target',                  ''],
         ['user.slice',                          ''],
         ['var-lib-machines.mount',              '',
          'local-fs.target.wants/'],

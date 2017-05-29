@@ -228,7 +228,7 @@ static int swap_add_default_dependencies(Swap *s) {
         if (r < 0)
                 return r;
 
-        return unit_add_two_dependencies_by_name(UNIT(s), UNIT_BEFORE, UNIT_CONFLICTS, SPECIAL_UMOUNT_TARGET, NULL, true);
+        return unit_add_two_dependencies_by_name(UNIT(s), UNIT_BEFORE, UNIT_CONFLICTS, SPECIAL_UMOUNT_POST_TARGET, NULL, true);
 }
 
 static int swap_verify(Swap *s) {
