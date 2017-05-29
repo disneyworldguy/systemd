@@ -96,7 +96,7 @@
 
     <para>Swap units with <varname>DefaultDependencies=</varname> set to its default <option>yes</option> value in the
     <literal>[Unit]</literal> section enabled implicitly acquire a <varname>Conflicts=</varname> and a
-    <varname>Before=</varname> dependency on <filename>umount.target</filename> so that they are deactivated at
+    <varname>Before=</varname> dependency on <filename>umount-post.target</filename> so that they are deactivated at
     shutdown as well as a <varname>Before=swap.target</varname> dependency.</para>
 
     <para>Additional implicit dependencies may be added as result of

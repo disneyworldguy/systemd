@@ -272,9 +272,12 @@
                                      services)     mounts, swaps,
                                          |           cryptsetup
                                          |          devices, ...)
-                                         |                |
-                                         v                v
+					 |                |
+					 v                v
                                   shutdown.target    umount.target
+                                         |                |
+                                         |                v
+					 |         umount-post.target
                                          |                |
                                          \_______   ______/
                                                  \ /

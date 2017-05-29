@@ -104,6 +104,7 @@
     <filename>time-sync.target</filename>,
     <filename>timers.target</filename>,
     <filename>umount.target</filename>,
+    <filename>umount-post.target</filename>,
     <!-- slices -->
     <filename>-.slice</filename>,
     <filename>system.slice</filename>,
@@ -661,6 +662,19 @@
           automount points on system shutdown.</para>
 
           <para>Mounts that shall be unmounted on system shutdown
+          shall add Conflicts dependencies to this unit for their
+          mount unit, which is implicitly done when
+          <varname>DefaultDependencies=yes</varname> is set (the
+          default).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><filename>umount-post.target</filename></term>
+        <listitem>
+          <para>A special target unit that unmounts all swaps on
+          system shutdown.</para>
+
+          <para>Swaps that shall be unmounted on system shutdown
           shall add Conflicts dependencies to this unit for their
           mount unit, which is implicitly done when
           <varname>DefaultDependencies=yes</varname> is set (the
